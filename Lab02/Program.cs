@@ -1,8 +1,8 @@
 ﻿/*
- * Student ID : 167070353
+ * Student ID : 1670703535
  * Name       : Phawat krittiyaphinit
  * Section    : 129A
- * No.        : 
+ * No.        : ...
  * Course     : GI113 Computer Programming (GI)
  */
 
@@ -37,6 +37,9 @@ namespace Lab02
             Console.WriteLine("===== BOSS STATUS: INITIAL =====");
             Console.WriteLine($"Hp: {currentHp} / {maxHp}");
             Console.WriteLine($"Hp Percent: 47%");
+
         }
+        
     }
+    
 }
