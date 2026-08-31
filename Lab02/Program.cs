@@ -175,3 +175,6 @@ namespace Lab02
             Console.WriteLine($"Hp Percent: 47%");
 
         }
+
+    }
+}
