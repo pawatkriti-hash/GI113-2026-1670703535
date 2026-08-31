@@ -1,7 +1,7 @@
 /*
- * Student ID :
- * Name       :
- * Section    :
+ * Student ID :1670703535
+ * Name       :Phawat Krittiyaphinit
+ * Section    :129A
  * No.        :
  * Course     : GI113 Computer Programming (GI)
  */
