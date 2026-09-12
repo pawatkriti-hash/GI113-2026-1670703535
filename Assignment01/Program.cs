@@ -13,10 +13,10 @@ namespace Assignment1
         {
             const string GameTitle = "Ironclad Frontier"; 
 
-            var weaponName = "Stormbreaker Blade";  
+            var weaponName = "Duskfang Reaver";  
             var weaponRank = 'S';                   
-            int weaponLevel = 42;
-            float baseDamage = 78.5f;
+            int weaponLevel = 37;
+            float baseDamage = 64.2f;
             double durabilityPrecise = 93.6;        
             bool isEquippable = true;
 
