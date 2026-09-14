@@ -2,6 +2,8 @@
 {
     internal class Program
     {
+        private static int monMaxHp;
+
         static void Main(string[] args)
         {
             Console.WriteLine(" ===> BATTLE NAGE <=== ");
@@ -57,6 +59,26 @@
             Console.WriteLine($"Normal Attack  would deal Critical: {critDamage} DMG");
 
 
+            bool heroHitsHarder = heroAtk > monAtk;
+            bool canOneShotWithNormal = normalDamage >= monHp;
+            bool monsterCanOneShotHero = counterDamage >= heroHp;
+            bool safeTrade = normalDamage > counterDamage && !monsterCanOneShotHero;
+            bool luckyOrLethal = isCrit || canOneShotWithNormal;
+            Console.WriteLine($"Hero hits harder than Monster: {heroHitsHarder}");
+            Console.WriteLine($"Normal Attack can defeat Monster in one hit: {canOneShotWithNormal}");
+            Console.WriteLine($"Monster could defeat Hero in one hit back: {monsterCanOneShotHero}");
+            Console.WriteLine($"This is a safe trade for Hero: {safeTrade}");
+            Console.WriteLine($"This attack is lucky or lethal: {luckyOrLethal}");
+
+            
+            monHp -= normalDamage;
+            Console.WriteLine($"Hero attacks! Monster HP: {monHp}/{monMaxHp}");
+
+            
+            bool monsterDefeated = monHp <= 0;
+            int goldEarned = (monMaxHp - monHp) * 2;
+            Console.WriteLine($"Monster defeated: {monsterDefeated}");
+            Console.WriteLine($"Gold earned: {goldEarned}");
 
 
 
