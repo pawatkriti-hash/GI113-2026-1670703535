@@ -11,36 +11,39 @@ namespace Assignment1
     {
         static void Main(string[] args)
         {
-            const string GameTitle = "Ironclad Frontier"; 
+            const string TrainerClass = "Elite Four";
+            const string AbilityName = "Blaze";
 
-            var weaponName = "Duskfang Reaver";  
-            var weaponRank = 'S';                   
-            int weaponLevel = 37;
-            float baseDamage = 64.2f;
-            double durabilityPrecise = 93.6;        
-            bool isEquippable = true;
+            var pokemonSpecies = "Charflare";    
+            var typeCode = 'F';                   
+            int currentHp = 142;
+            float attackPower = 118.3f;
+            double weightKgRaw = 89.4;
+            bool isFainted = false;
 
-            Console.WriteLine($"+==============================+");
-            Console.WriteLine($"|      {GameTitle}      |");
-            Console.WriteLine($"+==============================+");
-            Console.WriteLine($"| Weapon     : {weaponName}");
-            Console.WriteLine($"| Rank       : {weaponRank}");
-            Console.WriteLine($"| Level Req. : {weaponLevel}");
-            Console.WriteLine($"| Base DMG   : {baseDamage}");
-            Console.WriteLine($"| Durability : {durabilityPrecise}");
-            Console.WriteLine($"| Equippable : {isEquippable}");
-            Console.WriteLine($"+==============================+");
-            Console.WriteLine();
+            double currentHpAsDouble = currentHp;
 
-            
-            double weaponLevelAsDouble = weaponLevel;
-            Console.WriteLine($"Level Req. as double (implicit) : {weaponLevelAsDouble}");
+            double happinessRaw = 47.6;
+            int happinessCast = (int)happinessRaw;               
+            int happinessConvert = Convert.ToInt32(happinessRaw); 
 
-            
-            int durabilityTruncated = (int)durabilityPrecise;          
-            int durabilityRounded = Convert.ToInt32(durabilityPrecise); 
-            Console.WriteLine($"Durability cast (truncates)     : {durabilityTruncated}");
-            Console.WriteLine($"Durability Convert (rounds)     : {durabilityRounded}");
+            Console.WriteLine("======================================");
+            Console.WriteLine($"  {TrainerClass} BATTLE CARD");
+            Console.WriteLine("======================================");
+            Console.WriteLine($" สายพันธุ์      : {pokemonSpecies}");
+            Console.WriteLine($" รหัสธาตุ       : {typeCode}");
+            Console.WriteLine($" ความสามารถ     : {AbilityName}");
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine($" HP ปัจจุบัน (int)    : {currentHp}");
+            Console.WriteLine($" HP ปัจจุบัน (double) : {currentHpAsDouble} ");
+            Console.WriteLine($" พลังโจมตี            : {attackPower}");
+            Console.WriteLine($" น้ำหนัก (กก.)         : {weightKgRaw}");
+            Console.WriteLine($" สลบแล้ว?             : {isFainted}");
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine($" ค่าความสุขดิบ         : {happinessRaw}");
+            Console.WriteLine($" (int) cast            : {happinessCast} ");
+            Console.WriteLine($" Convert.ToInt32        : {happinessConvert} ");
+            Console.WriteLine("======================================");
         }
     }
 }
